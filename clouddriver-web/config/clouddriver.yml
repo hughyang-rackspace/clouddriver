@@ -54,7 +54,7 @@ default:
 
 aws:
   enabled: true
-  defaultAssumeRole: role/SpinnakerManagedRole
+  defaultAssumeRole: role/spinnakerManaged
   defaultRegions:
     - name: us-east-1
   accounts:
@@ -62,34 +62,15 @@ aws:
       accountId: "961474408092"
       regions:
         - name: us-east-1
-    - name: managed
+    - name: managed-1
+      accountId: "329349620729"
+      regions:
+        - name: us-east-1
+    - name: managed-2
       accountId: "961474408092"
       regions:
         - name: us-east-1
 
-azure:
-  enabled: false
-
-appengine:
-  enabled: false
-
-google:
-  enabled: false
-
-kubernetes:
-  enabled: false
-
-dockerRegistry:
-  enabled: false
-
-dcos:
-  enabled: false
-
-cf:
-  enabled: false
-
-oracle:
-  enabled: false
 
 spring:
   jackson:

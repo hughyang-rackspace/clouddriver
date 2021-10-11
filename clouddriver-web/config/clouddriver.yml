@@ -54,7 +54,7 @@ default:
 
 aws:
   enabled: true
-  defaultAssumeRole: role/spinnakerManaged
+  defaultAssumeRole: role/SpinnakerManagedRole
   defaultRegions:
     - name: us-east-1
   accounts:

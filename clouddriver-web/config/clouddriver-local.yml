@@ -1,0 +1,35 @@
+server:
+  port: 7002
+  ssl:
+    enabled: false
+  compression:
+    enabled: true
+
+redis:
+  connection: ${services.redis.baseUrl:redis://localhost:6379}
+  scheduler: default
+  parallelism: -1
+
+services:
+  front50:
+    baseUrl: http://localhost:8080
+
+management.health.elasticsearch.enabled: false
+
+default:
+  # legacyServerPort is a non-ssl listener, if ssl is enabled. -1 to disable
+  legacyServerPort: -1
+  account:
+    env: default
+
+aws:
+  enabled: true
+  defaults:
+    resourceTagging:
+      enabled: true
+  defaultAssumeRole: role/SpinnakerManagedRole
+  accounts:
+    - name: hughlab-01
+      accountId: "961474408092"
+      regions:
+        - name: us-east-1

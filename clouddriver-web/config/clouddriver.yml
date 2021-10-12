@@ -57,6 +57,7 @@ aws:
   defaultAssumeRole: role/spinnakerManaged
   defaultRegions:
     - name: us-east-1
+  resourceTagging: true
   accounts:
     - name: managing
       accountId: "961474408092"
